@@ -1,0 +1,50 @@
+name: Bug report
+description: Something behaves differently from vanilla Minecraft 26.3, or the server crashes.
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Server version
+      description: The version line near the top of the server log, for example "0.1.0-preview.1".
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - PvP / combat (knockback, damage, shields, totems, ...)
+        - Projectiles (bow, crossbow, trident, pearl, wind charge, ...)
+        - Explosions (crystal, anchor, bed, TNT, wind charge)
+        - Movement / other players look wrong
+        - Mobs, blocks or items
+        - Crash or freeze
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exactly what you did. For PvP: what you held, sprinting or not, what you swapped to, what you looked at, any lag.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected (vanilla behaviour)
+      description: If you can, say how vanilla Minecraft 26.3 behaves in the same situation.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Server log lines, a short video link, your settings. Do not include passwords or tokens.

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project page, downloads and test results
+    url: https://javerstudios.com/javer-server.html
+    about: Download the server, read the parity test results, and see known differences from vanilla.
